@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Luciana Alexandre</title>
+	<style>
+		body {
+			background-color: #fff;
+			color: #000;
+			font-size: 3em;
+			font-weight: bold;
+			text-align: center;
+			padding: 100px;
+			margin: 0;
+		}
+		
+		.color1 { color: #000000; }
+		.color2 { color: #000000; }
+		.color3 { color: #000000; }
+		.color4 { color: #000000; }
+		.color5 { color: #000000; }
+		.color6 { color: #000000; }
+	</style>
+</head>
+<body>
+	<script>
+		window.onload = function() {
+			var name = "Quero te ver.  E queria passar os dias contigo, mas você precisa fazer suas coisas. Estudar! Mas é isso Luciana!🌻❤️";
+			var colors = ["color1", "color2", "color3", "color4", "color5", "color6"];
+			var index = 0;
+			setInterval(function() {
+				document.body.className = colors[index];
+				index = (index + 1) % colors.length;
+				document.body.innerHTML = name;
+			}, 500);
+		};
+	</script>
+</body>
+</html>
