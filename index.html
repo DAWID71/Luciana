@@ -19,9 +19,30 @@
 		.color4 { color: #000000; }
 		.color5 { color: #000000; }
 		.color6 { color: #000000; }
+		
+		.board {
+			display: flex;
+			flex-wrap: wrap;
+			width: 300px;
+			margin: 50px auto;
+		}
+		
+		.square {
+			box-sizing: border-box;
+			width: 100px;
+			height: 100px;
+			font-size: 5em;
+			font-weight: bold;
+			text-align: center;
+			border: 2px solid #000;
+			cursor: pointer;
+		}
 	</style>
 </head>
 <body>
+	<div class="board"></div>
+	
+	<script src="https://cdn.jsdelivr.net/npm/tic-tac-toe-js/dist/tic-tac-toe.min.js"></script>
 	<script>
 		window.onload = function() {
 			var name = "Quero te ver.  E queria passar os dias contigo, mas você precisa fazer suas coisas. Estudar! Mas é isso Luciana!🌻❤️";
@@ -32,6 +53,9 @@
 				index = (index + 1) % colors.length;
 				document.body.innerHTML = name;
 			}, 500);
+			
+			var game = new TicTacToe('.board');
+			game.start();
 		};
 	</script>
 </body>
